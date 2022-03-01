@@ -1,0 +1,46 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#root {
+    display: flex;
+    justify-content: center;
+}
+
+.App {
+    width: 800px;
+}
+
+.post {
+    display: flex;
+    padding: 15px;
+    margin-top: 20px;
+    border: 2px solid silver;
+    justify-content: space-between;
+}
+
+.post__content {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.post-enter {
+    transform: translateX(-350px);
+}
+.post-enter-active {
+    transform: translateX(0px);
+    opacity: .3;
+    transition: all 500ms ease-in;
+}
+.post-exit {
+    opacity: 1;
+}
+.post-exit-active {
+    transform: translateX(-350px);
+    opacity: .3;
+    transition: all 500ms ease-in;
+}
+  
