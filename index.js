@@ -9,7 +9,7 @@ app.listen(PORT)
 
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
-app.use(express.static(path.join(__dirname, 'my-app')))
+app.use(express.static(path.join(__dirname, 'build')))
 
 const connection = mysql.createPool({
     host: 'localhost',
@@ -17,6 +17,10 @@ const connection = mysql.createPool({
     password: '',
     database: 'react',
     port: 3305
+})
+
+app.get('/', (req, res) => {
+    req.sendFile(path.resolve(__dirname, 'build', 'index.html'))
 })
 
 app.get('/api', async (req, res) => {
