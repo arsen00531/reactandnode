@@ -12,11 +12,10 @@ app.use(bodyParser.json())
 app.use(express.static(path.join(__dirname, 'build')))
 
 const connection = mysql.createPool({
-    host: 'localhost',
-    user: 'root',
-    password: '',
-    database: 'react',
-    port: 3305
+    host: 'us-cdbr-east-05.cleardb.net',
+    user: 'bc7dfc35f765e4',
+    password: 'a1fafa45',
+    database: 'heroku_d319be7afaea3c7',
 })
 
 app.get('/', (req, res) => {
